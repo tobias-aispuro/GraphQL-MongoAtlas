@@ -5,13 +5,25 @@
  * Comunicación vía transporte stdio utilizando el SDK oficial de MCP.
  */
 
+const path = require("path");
+// Cargar variables de entorno desde .env (en la raíz del proyecto o en el directorio actual)
+require("dotenv").config({ path: path.resolve(__dirname, "../.env") });
+require("dotenv").config();
+
 const { McpServer } = require("@modelcontextprotocol/sdk/server/mcp.js");
 const { StdioServerTransport } = require("@modelcontextprotocol/sdk/server/stdio.js");
 const { z } = require("zod");
 
-// Endpoint del servidor GraphQL (Render por defecto)
-const GRAPHQL_ENDPOINT =
-  process.env.GRAPHQL_ENDPOINT || "https://graphql-mongoatlas.onrender.com/";
+// Endpoint del servidor GraphQL configurado mediante variable de entorno
+const GRAPHQL_ENDPOINT = process.env.GRAPHQL_ENDPOINT;
+
+if (!GRAPHQL_ENDPOINT) {
+  console.error(
+    "❌ [MCP Error] La variable de entorno GRAPHQL_ENDPOINT no está configurada.\n" +
+      "Por favor define GRAPHQL_ENDPOINT en tu archivo .env o en las variables de entorno del cliente MCP."
+  );
+  process.exit(1);
+}
 
 /**
  * Función auxiliar para enviar queries y mutaciones a la API GraphQL.

@@ -54,7 +54,7 @@ Agrega lo siguiente en tu archivo de configuración:
         "/Users/tobiasaispuro/Developer/Clase-MongoAtlas/mcp-server/index.js"
       ],
       "env": {
-        "GRAPHQL_ENDPOINT": "https://graphql-mongoatlas.onrender.com/"
+        "GRAPHQL_ENDPOINT": "https://tu-servicio.onrender.com/"
       }
     }
   }
@@ -69,7 +69,7 @@ Agrega lo siguiente en tu archivo de configuración:
       "command": "node",
       "args": ["mcp-server/index.js"],
       "env": {
-        "GRAPHQL_ENDPOINT": "https://graphql-mongoatlas.onrender.com/"
+        "GRAPHQL_ENDPOINT": "https://tu-servicio.onrender.com/"
       }
     }
   }
