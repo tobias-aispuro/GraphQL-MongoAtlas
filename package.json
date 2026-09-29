@@ -7,7 +7,8 @@
     "start": "node src/index.js",
     "dev": "node --watch src/index.js",
     "build:mcp": "npx -y esbuild mcp-server/index.js --bundle --platform=node --target=node18 --outfile=mcpdist/index.js",
-    "start:mcp": "node mcpdist/index.js"
+    "start:mcp": "node mcpdist/index.js",
+    "inspector": "npx -y @modelcontextprotocol/inspector node mcpdist/index.js"
   },
   "keywords": [],
   "author": "",
