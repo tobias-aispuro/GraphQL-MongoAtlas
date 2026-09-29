@@ -1,0 +1,20 @@
+{
+  "name": "graphql-products-mcp-server",
+  "version": "1.0.0",
+  "description": "Servidor MCP (stdio) para interactuar con la API GraphQL de Productos en Render",
+  "main": "index.js",
+  "bin": {
+    "products-mcp": "./index.js"
+  },
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.31.0",
+    "zod": "^4.6.5"
+  }
+}
