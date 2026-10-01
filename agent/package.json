@@ -1,0 +1,19 @@
+{
+  "name": "catalog-audit-agent",
+  "version": "1.0.0",
+  "description": "Agente auditor de catálogo usando Vercel AI SDK + MCP",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@ai-sdk/anthropic": "^4.0.71",
+    "@ai-sdk/mcp": "^2.0.66",
+    "ai": "^7.0.127",
+    "dotenv": "^18.0.5"
+  }
+}
